@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wallet renders 1`] = `
+<div>
+  <h3
+    className="balance"
+  >
+    Wallet balance: 
+    20
+    😎
+  </h3>
+</div>
+`;
