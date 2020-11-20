@@ -9,4 +9,25 @@ describe('balanceReducer', () => {
 			balanceReducer(undefined, { type: constants.SET_BALANCE, balance })
 		).toEqual(balance)
 	})
+
+	it('deposits into the balance', () => {
+		const deposit = 20
+		const initialState = 5
+
+		expect(
+			balanceReducer(initialState, { type: constants.DEPOSIT, deposit })
+		).toEqual(deposit + initialState)
+	})
+})
+
+it('withdraws from the balance', () => {
+	const withdraw = 20
+	const initialState = 300
+
+	expect(
+		balanceReducer(initialState, {
+			type: constants.WITHDRAW,
+			withdraw,
+		})
+	).toEqual(initialState - withdraw)
 })
