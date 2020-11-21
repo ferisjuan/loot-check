@@ -4,8 +4,6 @@ export const fetchBitcoin = () => {
 	return dispatch => {
 		return fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
 			.then(response => response.json())
-			.then(bitcoin => {
-				dispatch({ type: FETCH_BITCOIN, bitcoin })
-			})
+			.then(bitcoin => dispatch({ type: FETCH_BITCOIN, bitcoin }))
 	}
 }
